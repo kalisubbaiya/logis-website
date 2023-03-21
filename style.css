@@ -21,11 +21,11 @@
 nav{
 	padding:0 15px;
 }
-nav ul li{
+nav ul li, ul li{
 	display:inline-block;
 	padding:10px 0px 10px 30px;
 }
-nav ul li a{
+nav ul li a, ul li a{
 	color:#ffffff99;
 }
  nav ul li:last-child a{
@@ -35,6 +35,9 @@ nav ul li a{
 	background-color:#0d42ff;
 	color:#fff;
 	border-radius:4px;
+}
+.nav-ul{
+	display: none;
 }
 header{
 	position:fixed;
@@ -506,7 +509,6 @@ sup{
 	font-size:20px;
 }
 .footer{
-	padding:50px 0px;
 	background-color:#0e1d34;
 	color:#fff;
 	position:relative;
@@ -593,6 +595,10 @@ sup{
 	nav{
 		display:none;
 	}
+	nav ul{
+		display: flex;
+		flex-direction: column;
+	}
 	.container, .container-1{
 		width:95%;
 	}
@@ -616,7 +622,7 @@ sup{
 		margin:0 0 40px;
 	}
 	section{
-		padding:0 0 80px;
+		padding:77px 0;
 	}
 	.col-5{
 		width:100%;
@@ -677,6 +683,9 @@ sup{
 		width:100%;
 		text-align:center;
 	}
+	.footer{
+		padding: 77px 0;
+	}
 }
 @media(min-width:600px){
 	.container, .container-1{
@@ -717,10 +726,13 @@ sup{
 }
 @media(min-width:1025px){
 	.bar{
-		display:none;
+		display:none !important;
 	}
 	nav{
 		display:flex;
+	}
+	nav ul{
+		flex-direction: row;
 	}
 	.container{
 		width:80%;
@@ -743,7 +755,7 @@ sup{
 		width:33.33%;
 	}
 	section{
-		padding:60px 0px;
+		padding:94px 0px;
 	}
 	.col-5{
 		width:50%;
@@ -775,5 +787,8 @@ sup{
 	}
 	.col-13, .col-14{
 		width:20%;
+	}
+	.footer{
+		padding: 50px 0;
 	}
 }
